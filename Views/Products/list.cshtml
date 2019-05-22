@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>列表信息页面</title>
+</head>
+<body>
+    <div>
+        @*获取到作用域中的分页信息*@
+        @{ var pro = ViewBag.ProList;}
+        <table border="1" cellspacing="0">
+            <tr><th>ProductId</th><th>TypeId</th><th>ProductName</th><th>Price</th><th>Descripiton</th></tr>
+            @foreach (var item in pro.InfoList)
+            {
+                <tr>
+                    <td>@item.ProductId</td>
+                    <td>@item.TypeId</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.Price</td>
+                    <td>@item.Descripiton</td>
+                </tr>
+            }
+        </table>
+        @for (int i = 1; i <= pro.PageCount; i++)
+        {
+            <a href="/Products/list/5/@i">@i</a>
+        }
+    </div>
+</body>
+</html>
