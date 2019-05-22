@@ -1,0 +1,5 @@
+当前页码：PageIndex
+当前显示条数：PageSize
+总条数：DataCount
+总页数：PageCount (总条数和每页显示条数计算出来)
+存放数据集合：List<Products>
